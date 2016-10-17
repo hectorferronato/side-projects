@@ -25,7 +25,8 @@ class Maze:
 
 		# Randomly add some walls to grid, -1's are walls.
 		for row in range(0,self.r-1):
-			for wallsPerRow in range(2):
+			# This formula (num of max(# of columns, # rows)/3) defines the ratio of walls among cells.
+			for wallsPerRow in range(0,(min(self.c,self.r)/4)):
 				randomIdx = random.randint(0,self.c-1)
 				grid[row][randomIdx] = -1
 
@@ -77,8 +78,7 @@ class Maze:
 
 	def getPath(self):
 		start = (0,0)
-		path = [(0,0)]
-		current = start
+		path,current = [(0,0)],start
 
 		# Creates pathList by checking the previous cell that moved to current cell.
 		while current != (self.r-1,self.c-1):
@@ -88,10 +88,11 @@ class Maze:
 		return self.pathList
 
 	def printPath(self):
+		pathListLen = len(self.pathList)
 		s=("*Origin ("+str(self.pathList[0][0])+","+str(self.pathList[0][1])+")* -> ")
-		for pair in range(2,len(self.pathList)-1): 
+		for pair in range(2,pathListLen-1): 
 			s+=("("+str(self.pathList[pair][0])+","+str(self.pathList[pair][1])+")"+" -> ")
-		s+=("#("+str(self.pathList[len(self.pathList)-1][0])+","+str(self.pathList[len(self.pathList)-1][1])+") Goal# ")
+		s+=("#("+str(self.pathList[pathListLen-1][0])+","+str(self.pathList[pathListLen-1][1])+") Goal# ")
 		print(s+"\n")
 
 	def printDetailedPath(self):
@@ -100,8 +101,7 @@ class Maze:
 
 		for cellIdx in range(0,n-1):
 			# If the path moves to the right.
-			if self.pathList[cellIdx][1]<self.pathList[cellIdx+1][1]: 
-				s,rightSpaces = s+("   *"),rightSpaces+1
+			if self.pathList[cellIdx][1]<self.pathList[cellIdx+1][1]: s,rightSpaces = s+("   *"),rightSpaces+1
 			# If the path moves downwards.
 			elif self.pathList[cellIdx][0]<self.pathList[cellIdx+1][0]: s+=("\n"+" "*(rightSpaces*4)+"     *")
 		
@@ -112,8 +112,7 @@ class Maze:
 		print(s)
 
 def main():
-
-	r,c = 20,16
+	r,c = 7,7
 	print("\nMaze with "+str(r)+" rows and "+str(c)+" columns.")
 	maze = Maze(r,c)
 	maze.printMaze()
