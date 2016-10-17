@@ -8,16 +8,16 @@ Expanding, applying, and sharing CS concepts.
 
 Algorithms with fun and in context:
 
-- **Dynamic Programming**:
+- ##**Dynamic Programming**:
   - **[maze-path-find.py](docs/maze-path-find.py)** is a class implementation of the solution to find if there's a path from a Maze's origin to its goal. The class has printing options for the traversed Maze (grid), and the path traverse in detail.
   
-- **Artificial Intelligence**:
+- ##**Artificial Intelligence**:
  - [ ] Uploading projects in "date-created" order.
  
-- **Chat Bots**:
+- ##**Chat Bots**:
   - [ ] Uploading projects in "date-created" order.
  
-- **VR**:
+- ##**VR**:
  - [ ] Uploading projects in "date-created" order.
 
 
