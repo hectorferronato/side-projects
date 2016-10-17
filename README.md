@@ -11,6 +11,7 @@ Algorithms with fun and in context:
 - ##**Dynamic Programming**:
 
   - **[maze-path-find.py] (/maze-path-find.py)** is a class implementation of the DP solution to find if there's a path from a Maze's origin to its goal, only moving downwards or to the right. The class has printing options for the traversed Maze (grid), and the path traverse in detail.
+  
    Run: $ python maze-path-find.py
   
   ![Screenshot] (imgs/maze.png?raw=true "Maze Path Details.")
