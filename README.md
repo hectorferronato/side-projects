@@ -9,7 +9,7 @@ Expanding, applying, and sharing CS concepts.
 Algorithms with fun and in context:
 
 - ##**Dynamic Programming**:
-  - **[maze-path-find.py](/side-projects/maze-path-find.py)** is a class implementation of the solution to find if there's a path from a Maze's origin to its goal. The class has printing options for the traversed Maze (grid), and the path traverse in detail.
+  - **[maze-path-find.py](side-projects/maze-path-find.py)** is a class implementation of the solution to find if there's a path from a Maze's origin to its goal. The class has printing options for the traversed Maze (grid), and the path traverse in detail.
   
 - ##**Artificial Intelligence**:
  - [ ] Uploading projects in "date-created" order.
