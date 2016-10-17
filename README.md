@@ -4,7 +4,7 @@ Expanding, applying, and sharing CS concepts.
  This repository is being updated with past projects I have created to **teach medium/advanced algorithms to beginner Computer Science students in a fun, more visual and contextual way**.
 
 - [X] Create repository.
-- [] Upload most relevant projects from previous years.
+- [ ] Upload most relevant projects from previous years.
 
 Algorithms with fun and in context:
 
