@@ -21,16 +21,17 @@ class Maze:
 		if self.c<=1: print("\t-Fix:Grid must have at least 2 cols."); self.c+=1
 
 		# Start grid, 0's are free positions.
-		grid = [ [ 0 for i in range(self.c) ] for j in range(self.r) ]
+		grid = [[0 for i in range(self.c)] for j in range(self.r)]
 
 		# Randomly add some walls to grid, -1's are walls.
 		for row in range(0,self.r-1):
-			# This formula (num of max(# of columns, # rows)/3) defines the ratio of walls among cells.
+			# This formula in range defines the ratio of walls among cells.
 			for wallsPerRow in range(0,(min(self.c,self.r)/4)):
 				randomIdx = random.randint(0,self.c-1)
 				grid[row][randomIdx] = -1
 
-		grid[0][0],grid[self.r-1][self.c-1] = 0,0 # Keep the origin and goal represented by a 0, so it's visitable.
+		# Keep the origin and goal represented by a 0, so it's visitable.
+		grid[0][0],grid[self.r-1][self.c-1] = 0,0
 
 		return grid
 
@@ -66,7 +67,7 @@ class Maze:
 
 			self.markVisited(i,j)
 
-			# Not necessary, but ensures that both directions have 50% chances of being picked first.
+			# Ensures that both directions have 50% chances of being picked first.
 			randomness = random.random()
 			if randomness>.5:
 				if self.traversePath(i+1,j) or self.traversePath(i,j+1): return True
@@ -80,7 +81,7 @@ class Maze:
 		start = (0,0)
 		path,current = [(0,0)],start
 
-		# Creates pathList by checking the previous cell that moved to current cell.
+		# Creates pathList checking the previous cell that moved to current cell.
 		while current != (self.r-1,self.c-1):
 			self.pathList.append(current)
 			current = self.visited[current]
@@ -89,10 +90,15 @@ class Maze:
 
 	def printPath(self):
 		pathListLen = len(self.pathList)
-		s=("*Origin ("+str(self.pathList[0][0])+","+str(self.pathList[0][1])+")* -> ")
+		s=("*Origin ("+str(self.pathList[0][0])
+					  +","+str(self.pathList[0][1])
+				      +")* -> ")
 		for pair in range(2,pathListLen-1): 
-			s+=("("+str(self.pathList[pair][0])+","+str(self.pathList[pair][1])+")"+" -> ")
-		s+=("#("+str(self.pathList[pathListLen-1][0])+","+str(self.pathList[pathListLen-1][1])+") Goal# ")
+			s+=("("+str(self.pathList[pair][0])
+				   +","
+				   +str(self.pathList[pair][1])+")"+" -> ")
+		s+=("#("+str(self.pathList[pathListLen-1][0])
+				+","+str(self.pathList[pathListLen-1][1])+") Goal# ")
 		print(s+"\n")
 
 	def printDetailedPath(self):
@@ -101,14 +107,17 @@ class Maze:
 
 		for cellIdx in range(0,n-1):
 			# If the path moves to the right.
-			if self.pathList[cellIdx][1]<self.pathList[cellIdx+1][1]: s,rightSpaces = s+("   *"),rightSpaces+1
+			if self.pathList[cellIdx][1]<self.pathList[cellIdx+1][1]: 
+				s,rightSpaces = s+("   *"),rightSpaces+1
 			# If the path moves downwards.
-			elif self.pathList[cellIdx][0]<self.pathList[cellIdx+1][0]: s+=("\n"+" "*(rightSpaces*4)+"     *")
+			elif self.pathList[cellIdx][0]<self.pathList[cellIdx+1][0]: 
+				s+=("\n"+" "*(rightSpaces*4)+"     *")
 		
 		# Print the goal cell, out of loop because of index range.
 		if self.pathList[n-1][1]>self.pathList[cellIdx+1][1]: 
 			s,rightSpaces = s+("   *"),rightSpaces+1
-		elif self.pathList[n-1][0]>self.pathList[cellIdx+1][0]: s+=("\n"+" "*(rightSpaces*4)+"     *")
+		elif self.pathList[n-1][0]>self.pathList[cellIdx+1][0]: 
+			s+=("\n"+" "*(rightSpaces*4)+"     *")
 		print(s)
 
 def main():
