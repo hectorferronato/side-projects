@@ -93,7 +93,7 @@ class Maze:
         s=("*Origin ("+str(self.pathList[0][0])
                       +","+str(self.pathList[0][1])
                       +")* -> ")
-        for pair in range(2,pathListLen-1): 
+        for pair in range(1,pathListLen-1): 
             s+=("("+str(self.pathList[pair][0])
                    +","
                    +str(self.pathList[pair][1])+")"+" -> ")
