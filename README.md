@@ -12,6 +12,8 @@ Projects:
 
   - **[Google Right-Click Multi-Search] (Google-Right-Click-Multi-Search/)** is a Chrome extension developed to provide a quick access to all "search-types" Google provides (such as Image, News, and Maps) just by highlighting a word and right-clicking on it.
   
+       Install [here] (https://chrome.google.com/webstore/detail/google-right-click-multi/hacdkngldbgplmdlmdhgiehbmmlckmea)
+  
        ![Screenshot] (Google-Right-Click-Multi-Search/imgs/example.png "Right-Click Menu Tool")
 
 Algorithms with fun and in context:
