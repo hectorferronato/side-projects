@@ -11,9 +11,9 @@ class Maze:
         self.c = cols
         self.visited = {}
         self.pathList = []
-        self.grid = self.createGrid()
+        self.grid = self.__createGrid__()
 
-    def createGrid(self):
+    def __createGrid__(self):
         # This version performs with RxC grid, with R=R>1. 
 
         # Use to make sure R>1 and C>1.
@@ -47,7 +47,7 @@ class Maze:
                 else: p+= ("  "+str(grid[row][column]))
             print p; p = "  "
 
-    def markVisited(self,i,j):
+    def __markVisited__(self,i,j):
         if i == 0 and j == 1: self.visited[(i,j-1)] = (i,j)
         elif i == 1 and j == 0: self.visited[(i-1,j)] = (i,j)
         else:
@@ -59,13 +59,13 @@ class Maze:
     def traversePath(self, i, j):
         # Base Case of DP, if we reached the goal.
         if i==self.r-1 and j==self.c-1: 
-            self.markVisited(i,j)
+            self.__markVisited__(i,j)
             return True
 
         # Recurse to try the cell below and cell to the right.
         if i<self.r and j<self.c and self.grid[i][j] == 0:
 
-            self.markVisited(i,j)
+            self.__markVisited__(i,j)
 
             # Ensures that both directions have 50% chances of being picked first.
             randomness = random.random()
@@ -77,7 +77,7 @@ class Maze:
             return False
         return False
 
-    def getPath(self):
+    def __getPath__(self):
         start = (0,0)
         path,current = [(0,0)],start
 
@@ -102,7 +102,7 @@ class Maze:
         print(s+"\n")
 
     def printDetailedPath(self):
-        self.getPath()
+        self.__getPath__()
         s,n,rightSpaces = "\n     *",len(self.pathList),0
 
         for cellIdx in range(0,n-1):
