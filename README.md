@@ -1,7 +1,7 @@
 # Hector's Side Projects
 Expanding, applying, and sharing CS concepts.
 
- This repository is being updated with past projects I have created to **teach medium/advanced algorithms to beginner Computer Science students in a fun, more visual and contextual way**. The goal is to find the best use of CS to cause social impact and improve educational methods.
+ This repository is being updated with past projects I have created to **teach medium/advanced algorithms to beginner Computer Science students in a fun, more visual and contextual way**. The goal has been to find the best use of CS to cause social impact and improve educational methods.
 
 - [X] Create repository.
 - [ ] Upload most relevant projects from previous years.
