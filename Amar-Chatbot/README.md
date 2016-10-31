@@ -4,13 +4,15 @@
   
 Looking for someone to collaborate with, so, please, feel free to take on and keep improving it!
 
-<img src="imgs/example.png" alt="Facebook Implementation of Amar Chabot" width="50%" height="50%">
+<img src="imgs/example.png" alt="Facebook Implementation of Amar Chabot" width="50%" height="50%" align="center">
+  
   
  - [X] Filter explicit/swear words.
  - [X] Integrate Keyworkds API (From: https://github.com/aneesha/RAKE/blob/master/rake.py)
  - [X] Integrate Wikipedia Search API (From: https://github.com/goldsmith/Wikipedia)
  - [ ] Integrate Google Search API
  - [ ] Self learning + memory
+ 
 
 (*Curiosity*: Amar means "To love" in Portuguese.)
 
