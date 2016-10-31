@@ -20,8 +20,8 @@ Projects:
        - [X] Integrate Wikipedia Search API (From: https://github.com/goldsmith/Wikipedia)
        - [ ] Integrate Google Search API
        - [ ] Self learning + memory
-
-       (*Curiosity*: Amar means "To love" in Portuguese.)
+       
+      (*Curiosity*: Amar means "To love" in Portuguese.)
 
 - ##**Browser Extensions**:
 
