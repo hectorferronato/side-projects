@@ -4,7 +4,7 @@
   
 Looking for someone to collaborate with, so, please, feel free to take on and keep improving it!
 
-      <img src="imgs/example.png" alt="Facebook Implementation of Amar Chabot" width="50%" height="50%">
+   <img src="imgs/example.png" alt="Facebook Implementation of Amar Chabot" width="50%" height="50%">
   
   
  - [X] Filter explicit/swear words.
