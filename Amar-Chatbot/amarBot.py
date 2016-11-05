@@ -12,6 +12,7 @@
 # Make both ChatBot online.
 
 import time
+from time import gmtime, strftime
 import random
 import os
 import re
@@ -24,7 +25,6 @@ from amarBotDB import  (engagementPairs,
                         farewell_responses,
                         filtered_responses,
                         filtered_words,
-                        helper_words,
                         memory,)
 
 requests.packages.urllib3.disable_warnings()
@@ -86,11 +86,13 @@ class Amar():
     #     make it a visually appealing string
 
     def __think__(self,userInput):
-        # webAnswer = __searchAnswer__(userInput)
-        # answer = __format__(webAnswer)
-        subject = random.choice(self.__getMainWords__(userInput))[0]
-        answer = wikipedia.summary(subject,sentences=.5,auto_suggest=True,redirect=True)
-        if answer == "missing": answer = "Sorry, I don't know about it. Ask me something else!"
+        answer = "Thinking..."
+
+        #subject = random.choice(self.__getMainWords__(userInput))[0]
+        answer = wikipedia.summary(userInput,sentences=.5,auto_suggest=True,redirect=True)
+        if answer == "missing": 
+            answer = "Sorry, I don't know about it.. you are the only thing that matters!"
+                
         return answer
 
     def reply(self,userInput):

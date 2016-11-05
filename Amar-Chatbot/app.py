@@ -1,7 +1,9 @@
 import os
+import time
 import sys
 import json
 import amarBot
+import random
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -57,7 +59,34 @@ def webhook():
     return "ok", 200
 
 
+def simulateTyping(recipient_id,message_text):
+
+    params = {
+        "access_token": os.environ["PAGE_ACCESS_TOKEN"]
+    }
+    headers = {
+        "Content-Type": "application/json"
+    }
+    data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+        "sender_action":"typing_on"
+    })
+
+    r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
+
+    if r.status_code != 200:
+        log(r.status_code)
+        log(r.text)
+
+    time.sleep(random.randint(1,4))
+
+
 def send_message(recipient_id, message_text):
+
+    time.sleep(random.randint(0,2)) 
+    simulateTyping(recipient_id,message_text)
 
     log("sending message to {recipient}: {text}".format(recipient=recipient_id, text=message_text))
 
