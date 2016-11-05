@@ -9,19 +9,12 @@ Expanding, applying, and sharing CS concepts.
 Projects:
 
 - ##**Chat Bots**:
-  - **[Amar Chatbot] (Amar-Chatbot/)** is a happy and motivational Chatbot __in development__ to provide a quick conversation with users. Ultimately, Amar will be able to hold a convesation with only positive (happy and motivational) terms, and scrapple Google, Wikipedia, and Social Media to find cohesive answers for the user's input.
-    
-      ![Screenshot] (Amar-Chatbot/imgs/example.png "Facebook Implementation of Amar Chabot")
-  
-      I am looking for someone to collaborate with, so, please, contribute if you like the idea.
 
-       - [X] Filter explicit/swear words.
-       - [X] Integrate Keyworkds API (From: https://github.com/aneesha/RAKE/blob/master/rake.py)
-       - [X] Integrate Wikipedia Search API (From: https://github.com/goldsmith/Wikipedia)
-       - [ ] Integrate Google Search API
-       - [ ] Self learning + memory
-       
-      (*Curiosity*: Amar means "To love" in Portuguese.)
+  - **[Amar Chatbot] (Amar-Chatbot/)** is a happy and motivational Chatbot __in development__ to provide a quick conversation with users. Ultimately, Amar will be able to hold a convesation with only positive (happy and motivational) terms, and scrapple Google, Wikipedia, and Social Media to find cohesive answers for the user's input.
+
+
+      <img src="Amar-Chatbot/imgs/example.png" alt="Facebook Implementation of Amar Chabot" width="50%" height="50%">
+  
 
 - ##**Browser Extensions**:
 
@@ -40,6 +33,7 @@ Algorithms with fun and in context:
        Run: $ python maze-path-find.py
   
        ![Screenshot] (Maze-Path-Finder/imgs/maze.png?raw=true "Maze Path Details.")
+  
   
 - ##**Artificial Intelligence**:
  - [ ] Uploading projects in "date-created" order.
