@@ -10,7 +10,7 @@ represent walls that stop any path.
 
    Run: $ python maze-path-find.py
 
-   ![Screenshot](Maze Path Finder/imgs/maze.png?raw=true "Maze Path Details.")
+   ![Screenshot](imgs/maze.png?raw=true "Maze Path Details.")
 
    Class structure:
 
